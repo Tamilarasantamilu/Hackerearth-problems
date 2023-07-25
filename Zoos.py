@@ -1,16 +1,15 @@
-x=input()
+input_word = input()
 
-s1=0
+z_count = 0 
+o_count = 0
 
-s2=0
+for each_char in input_word:
+    if each_char == 'z':
+        z_count = z_count + 1
+    elif each_char == 'o':
+        o_count = o_count + 1
 
-for i in range(len(x)):
-    if x[i]=='z':
-        s1=s1+1
-
-else:
-    s2=s2+1
-if(s2/s1==2):
-    print("No")
-else:
+if z_count*2==o_count:
     print("Yes")
+else:
+    print("No")
